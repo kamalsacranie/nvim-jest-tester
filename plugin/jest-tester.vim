@@ -15,7 +15,7 @@ lua require'jest-tester'.setup()
 let g:jest_tester_loaded = 1
 
 " Create vim command
-command! JestTest :lua require'clipboard-image.paste'.paste_img()
+command! JestTest :lua require'jest-tester'.test()
 
 " let &cpo = s:save_cpo
 " unlet s:save_cpo

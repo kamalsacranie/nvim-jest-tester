@@ -21,7 +21,7 @@ end
 ---@param bufnr (integer|nil) A buffer number. Defaults to the current buffer
 ---@param filetype (string|nil) The filetype of the buffer you want to parse. Defaults to the buffer filetype
 ---@return TSNode The root node of the parsed buffer
-local get_buffer_root_node = function(bufnr, filetype)
+M.get_buffer_root_node = function(bufnr, filetype)
   local parser = vim.treesitter.get_parser(bufnr, filetype, {})
   local tree = parser:parse()[1]
   return tree:root()
